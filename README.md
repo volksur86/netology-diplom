@@ -160,7 +160,15 @@ Zabbix server доступен:
 
 <img width="1894" height="1142" alt="image" src="https://github.com/user-attachments/assets/c12f596b-a841-419a-8f68-2e3a00d49d25" />
 
+Проверяем Elasticsearch:
 
+<img width="1430" height="1117" alt="image" src="https://github.com/user-attachments/assets/e49a20e5-2839-4942-a471-0f21920ae6d8" />
+
+Проверяем Filebeat на наших веб серверах:
+
+<img width="1592" height="691" alt="image" src="https://github.com/user-attachments/assets/5defe1f3-c33e-416d-972e-510a25ab5e45" />
+
+<img width="1374" height="550" alt="image" src="https://github.com/user-attachments/assets/66b905db-ebb6-4246-9902-99048b29c1df" />
 
 
 
