@@ -118,5 +118,6 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 и zabbix агентов: ansible-playbook zabbix-agent.yml
 
+<img width="1098" height="1063" alt="image" src="https://github.com/user-attachments/assets/e6138483-626b-4be0-8f7f-43969e14fd28" />
 
 
