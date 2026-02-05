@@ -1,0 +1,42 @@
+---
+- name: Install dependencies
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - curl
+    state: present
+    update_cache: yes
+
+- name: Download Filebeat .deb from Yandex mirror
+  ansible.builtin.get_url:
+    url: "https://mirror.yandex.ru/mirrors/elastic/7/pool/main/f/filebeat/filebeat-7.17.29-amd64.deb"
+    dest: /tmp/filebeat-7.17.29-amd64.deb
+    mode: '0644'
+
+- name: Install Filebeat from .deb
+  ansible.builtin.apt:
+    deb: /tmp/filebeat-7.17.29-amd64.deb
+
+- name: Configure filebeat.yml
+  ansible.builtin.copy:
+    dest: /etc/filebeat/filebeat.yml
+    mode: '0644'
+    content: |
+      filebeat.inputs:
+        - type: log
+          enabled: true
+          paths:
+            - /var/log/nginx/access.log
+            - /var/log/nginx/error.log
+
+      output.elasticsearch:
+        hosts: ["{{ elasticsearch_host }}:9200"]
+
+      setup.kibana:
+        host: "{{ kibana_host }}:5601"
+
+- name: Enable and restart Filebeat
+  ansible.builtin.service:
+    name: filebeat
+    state: restarted
+    enabled: yes
