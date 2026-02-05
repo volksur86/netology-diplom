@@ -100,6 +100,14 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <img width="869" height="919" alt="image" src="https://github.com/user-attachments/assets/ed9d1988-e102-4c2c-af63-204bba094b4a" />
 
+После создания всех файлов, инициализируем провайдера: terraform init, далее проверяем terraform plan и запускаем создание ВМ, сетей, подсетей и т.д. terraform apply
+
+<img width="885" height="1086" alt="image" src="https://github.com/user-attachments/assets/9b0d871a-4642-4f31-8784-5ad540592a2d" />
+
+Далее запускаем по порядку наши ямл файлы:
+
+<img width="1203" height="1119" alt="image" src="https://github.com/user-attachments/assets/4ec20e6f-2535-4438-a769-61beb510b772" />
+
 
 
 
