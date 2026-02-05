@@ -1,0 +1,11 @@
+---
+- hosts: webserver
+  remote_user: ubuntu
+  become: yes
+
+  vars:
+    elasticsearch_host: "elastic.ru-central1.internal"
+    kibana_host: "kibana.ru-central1.internal"
+
+  roles:
+    - filebeat

@@ -1,0 +1,28 @@
+[bastion]
+bastion_host ansible_host=93.77.176.167
+
+[webserver]
+web1 ansible_host=web1.ru-central1.internal
+web2 ansible_host=web2.ru-central1.internal
+
+[zabbix]
+zabbix_host ansible_host=zabbix.ru-central1.internal
+
+[elastic]
+elastic_host ansible_host=elastic.ru-central1.internal
+
+[kibana]
+kibana_host ansible_host=kibana.ru-central1.internal
+
+[all:vars]
+ansible_user=ubuntu
+
+[via_bastion:children]
+webserver
+zabbix
+elastic
+kibana
+
+[via_bastion:vars]
+ansible_ssh_common_args='-o ProxyJump=ubuntu@93.77.176.167'
+

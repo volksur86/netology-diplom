@@ -1,0 +1,14 @@
+---
+- hosts:
+    - webserver
+    - elastic
+    - kibana
+  remote_user: ubuntu
+  become: yes
+
+  vars:
+    zabbix_server_address: "zabbix.ru-central1.internal"
+
+  roles:
+    - zabbix-agent
+

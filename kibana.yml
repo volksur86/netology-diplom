@@ -1,0 +1,10 @@
+---
+- hosts: kibana
+  remote_user: ubuntu
+  become: yes
+
+  vars:
+    elasticsearch_host: "elastic.ru-central1.internal"
+
+  roles:
+    - kibana
