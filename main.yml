@@ -1,0 +1,35 @@
+---
+- name: Install Java (required by Elasticsearch)
+  ansible.builtin.apt:
+    name:
+      - openjdk-11-jre-headless
+    state: present
+    update_cache: no
+
+- name: Download Elasticsearch .deb from Yandex mirror
+  ansible.builtin.get_url:
+    url: "https://mirror.yandex.ru/mirrors/elastic/7/pool/main/e/elasticsearch/elasticsearch-7.17.29-amd64.deb"
+    dest: /tmp/elasticsearch-7.17.29-amd64.deb
+    mode: '0644'
+
+- name: Install Elasticsearch from .deb
+  ansible.builtin.apt:
+    deb: /tmp/elasticsearch-7.17.29-amd64.deb
+
+- name: Configure elasticsearch.yml
+  ansible.builtin.blockinfile:
+    path: /etc/elasticsearch/elasticsearch.yml
+    block: |
+      cluster.name: diplom-cluster
+      node.name: elastic-node1
+      network.host: 0.0.0.0
+      http.port: 9200
+      discovery.type: single-node
+    create: no
+
+- name: Enable and restart Elasticsearch
+  ansible.builtin.service:
+    name: elasticsearch
+    state: restarted
+    enabled: yes
+
