@@ -122,6 +122,12 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 Zabbix server доступен:
 
-<img width="1463" height="830" alt="image" src="https://github.com/user-attachments/assets/9c4471bf-734f-43d5-8319-f357bc2e0694" />
+<img width="1421" height="768" alt="image" src="https://github.com/user-attachments/assets/da0d6b92-b92b-42a2-9864-88187951b7ac" />
 
+Запускаем остальные плейбуки:
 
+<img width="1481" height="756" alt="image" src="https://github.com/user-attachments/assets/719cac97-3e7d-4afc-9af2-370a5072bbd6" />
+
+<img width="1373" height="1078" alt="image" src="https://github.com/user-attachments/assets/b9a511c5-21f6-4088-8308-cc55ba6cae7b" />
+
+<img width="1287" height="627" alt="image" src="https://github.com/user-attachments/assets/8056c680-e3e4-447f-9058-563dbb89e94b" />
