@@ -1,0 +1,87 @@
+---
+- name: Install dependencies
+  ansible.builtin.apt:
+    name:
+      - wget
+      - gnupg
+      - lsb-release
+    state: present
+    update_cache: yes
+
+- name: Download Zabbix repo package
+  ansible.builtin.get_url:
+    url: "https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu22.04_all.deb"
+    dest: /tmp/zabbix-release_latest_7.0+ubuntu22.04_all.deb
+    mode: '0644'
+
+- name: Install Zabbix repo package
+  ansible.builtin.apt:
+    deb: /tmp/zabbix-release_latest_7.0+ubuntu22.04_all.deb
+
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Install Zabbix server, frontend and agent
+  ansible.builtin.apt:
+    name:
+      - zabbix-server-mysql
+      - zabbix-frontend-php
+      - zabbix-apache-conf
+      - zabbix-sql-scripts
+      - zabbix-agent
+      - mariadb-server
+    state: present
+
+- name: Install ansible mysql python module
+  ansible.builtin.apt:
+    name: python3-mysqldb
+    state: present
+    update_cache: yes
+
+- name: Enable and start MariaDB
+  ansible.builtin.service:
+    name: mariadb
+    state: started
+    enabled: yes
+
+- name: Create Zabbix database
+  ansible.builtin.mysql_db:
+    name: zabbix
+    state: present
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+  become: yes
+
+- name: Create Zabbix DB user
+  ansible.builtin.mysql_user:
+    name: zabbix
+    password: zabbix
+    priv: "zabbix.*:ALL"
+    state: present
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+  become: yes
+
+- name: Import Zabbix database schema
+  ansible.builtin.shell: "zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql -uzabbix -pzabbix zabbix"
+  args:
+    creates: /var/lib/mysql/zabbix/history.ibd
+  become: yes
+
+- name: Configure Zabbix server DB connection
+  ansible.builtin.lineinfile:
+    path: /etc/zabbix/zabbix_server.conf
+    regexp: '^#? DBPassword='
+    line: 'DBPassword=zabbix'
+    backup: yes
+
+- name: Enable and start Zabbix server
+  ansible.builtin.service:
+    name: zabbix-server
+    state: started
+    enabled: yes
+
+- name: Enable and restart Apache (Zabbix frontend)
+  ansible.builtin.service:
+    name: apache2
+    state: started
+    enabled: yes

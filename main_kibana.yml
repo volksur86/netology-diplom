@@ -1,0 +1,33 @@
+---
+- name: Install dependencies
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - curl
+    state: present
+    update_cache: yes
+
+- name: Download Kibana .deb from Yandex mirror
+  ansible.builtin.get_url:
+    url: "https://mirror.yandex.ru/mirrors/elastic/7/pool/main/k/kibana/kibana-7.17.29-amd64.deb"
+    dest: /tmp/kibana-7.17.29-amd64.deb
+    mode: '0644'
+
+- name: Install Kibana from .deb
+  ansible.builtin.apt:
+    deb: /tmp/kibana-7.17.29-amd64.deb
+
+- name: Configure Kibana
+  ansible.builtin.blockinfile:
+    path: /etc/kibana/kibana.yml
+    block: |
+      server.host: "0.0.0.0"
+      server.port: 5601
+      elasticsearch.hosts: ["http://{{ elasticsearch_host }}:9200"]
+    create: no
+
+- name: Enable and restart Kibana
+  ansible.builtin.service:
+    name: kibana
+    state: restarted
+    enabled: yes
