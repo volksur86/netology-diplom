@@ -120,4 +120,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <img width="1098" height="1063" alt="image" src="https://github.com/user-attachments/assets/e6138483-626b-4be0-8f7f-43969e14fd28" />
 
+Zabbix server доступен:
+
+<img width="1463" height="830" alt="image" src="https://github.com/user-attachments/assets/9c4471bf-734f-43d5-8319-f357bc2e0694" />
+
 
