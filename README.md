@@ -136,3 +136,24 @@ Zabbix server доступен:
 
 <img width="1535" height="1006" alt="image" src="https://github.com/user-attachments/assets/4c45f20c-3560-428b-a2ce-d747cb9d1abb" />
 
+Созданная инфраструктура: (информация по резервным копиям ВМ появится сегодня ночью - по расписанию в 3 ночи)
+
+<img width="1875" height="960" alt="image" src="https://github.com/user-attachments/assets/c3c58fbe-e063-4cfb-9cab-03bf945580f7" />
+
+ВМ:
+
+<img width="1918" height="854" alt="image" src="https://github.com/user-attachments/assets/81b783a3-da81-430e-9575-ca8da808fea7" />
+
+Сети:
+
+<img width="1731" height="959" alt="image" src="https://github.com/user-attachments/assets/a7d2ccee-474d-4eeb-82d8-bd470be91df7" />
+
+<img width="1480" height="377" alt="image" src="https://github.com/user-attachments/assets/773f28aa-bd0d-4bd1-8fbe-17848921fe40" />
+
+<img width="1910" height="826" alt="image" src="https://github.com/user-attachments/assets/8db39e63-bb82-40d1-93e5-5bda5b08037f" />
+
+
+
+
+
+
