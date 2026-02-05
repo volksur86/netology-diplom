@@ -152,6 +152,11 @@ Zabbix server доступен:
 
 <img width="1910" height="826" alt="image" src="https://github.com/user-attachments/assets/8db39e63-bb82-40d1-93e5-5bda5b08037f" />
 
+Добавили наши хосты на мониторинг:
+
+<img width="1849" height="884" alt="image" src="https://github.com/user-attachments/assets/da476205-6f9b-4e95-aa33-a512c86dad04" />
+
+
 
 
 
