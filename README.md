@@ -108,6 +108,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 <img width="1203" height="1119" alt="image" src="https://github.com/user-attachments/assets/4ec20e6f-2535-4438-a769-61beb510b772" />
 
+Далее проверяем балансировщик:
 
+<img width="1420" height="924" alt="image" src="https://github.com/user-attachments/assets/6d11911e-e9f6-42a5-99fd-ca5bfd4c869b" />
 
 
