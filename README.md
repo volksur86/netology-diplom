@@ -170,6 +170,10 @@ Zabbix server доступен:
 
 <img width="1374" height="550" alt="image" src="https://github.com/user-attachments/assets/66b905db-ebb6-4246-9902-99048b29c1df" />
 
+Логи пишутся:
+
+<img width="1857" height="1100" alt="image" src="https://github.com/user-attachments/assets/fc3d1713-9b27-41a8-ae9b-161760ac52cb" />
+
 
 
 
