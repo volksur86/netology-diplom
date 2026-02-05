@@ -131,3 +131,8 @@ Zabbix server доступен:
 <img width="1373" height="1078" alt="image" src="https://github.com/user-attachments/assets/b9a511c5-21f6-4088-8308-cc55ba6cae7b" />
 
 <img width="1287" height="627" alt="image" src="https://github.com/user-attachments/assets/8056c680-e3e4-447f-9058-563dbb89e94b" />
+
+Проверяем Kibana через публичный ip адрес - доступна:
+
+<img width="1535" height="1006" alt="image" src="https://github.com/user-attachments/assets/4c45f20c-3560-428b-a2ce-d747cb9d1abb" />
+
