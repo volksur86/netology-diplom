@@ -92,7 +92,7 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 # Выполнение работы: 
 
-Устанавливаем Terraform (с зеркала Yandex), Ansible и yc
+Устанавливаем Terraform (с зеркала Yandex https://hashicorp-releases.yandexcloud.net/terraform/), Ansible и yc
 
 <img width="1720" height="702" alt="image" src="https://github.com/user-attachments/assets/164bf212-3cf1-45b2-b362-5433b5fdd5aa" />
 
