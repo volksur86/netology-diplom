@@ -156,7 +156,7 @@ Zabbix server доступен:
 
 <img width="1849" height="884" alt="image" src="https://github.com/user-attachments/assets/da476205-6f9b-4e95-aa33-a512c86dad04" />
 
-Создаем дашборды для мониторинга наших веб серверов по процессорам, памяти, дискам, сети и т.д.
+Создаем дашборды для мониторинга наших веб серверов по процессорам, памяти, дискам, сети и т.д., из перечня можно настроить уведомления по многим параматрам, какие необходимы.
 
 <img width="1894" height="1142" alt="image" src="https://github.com/user-attachments/assets/c12f596b-a841-419a-8f68-2e3a00d49d25" />
 
@@ -174,6 +174,10 @@ Zabbix server доступен:
 
 <img width="1857" height="1100" alt="image" src="https://github.com/user-attachments/assets/fc3d1713-9b27-41a8-ae9b-161760ac52cb" />
 
+PS: Появились резервные копии:
 
+<img width="1777" height="788" alt="image" src="https://github.com/user-attachments/assets/98aa274f-5fe4-449a-9c8f-1fd7dda01dd8" />
+
+<img width="1910" height="863" alt="image" src="https://github.com/user-attachments/assets/f88d6d5c-7540-41e8-9c84-5af6aad436df" />
 
 
